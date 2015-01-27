@@ -38,10 +38,10 @@ var getmap = function () {
 };
 var summery = function () {
     var m = getmap();
-    var h1 = m[0].map(function (v) { return 'b' + v; }).join(", ");
-    var h2 = m[0].map(function (v) { return 'b' + v.split("").reverse().join(""); }).join(", ");
-    var v1 = m[1].map(function (v) { return 'b' + v; }).join(", ");
-    var v2 = m[1].map(function (v) { return 'b' + v.split("").reverse().join(""); }).join(", ");
+    var h1 = m[0].map(function (v) { return 'B' + v; }).join(", ");
+    var h2 = m[0].map(function (v) { return 'B' + v.split("").reverse().join(""); }).join(", ");
+    var v1 = m[1].map(function (v) { return 'B' + v; }).join(", ");
+    var v2 = m[1].map(function (v) { return 'B' + v.split("").reverse().join(""); }).join(", ");
 
     $(".h1").val(h1);
     $(".h2").val(h2);
