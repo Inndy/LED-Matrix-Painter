@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Led Matrix Painter</title>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <style type="text/css">
+    :root {
+      --block-size: 32px;
+      --block-count: 8;
+    }
+
+    * {
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+    }
+
+    .blocks * {
+      margin 0;
+    }
+
+    .blocks .row {
+      display: block;
+      line-height: 0;
+    }
+
+    .blocks .row * {
+      display: inline-block;
+      line-height: 0;
+      height: 30px;
+      width: 30px;
+      height: calc(var(--block-size) - 2px);
+      width: calc(var(--block-size) - 2px);
+      float: left;
+      border: 1px solid gray;
+    }
+
+    .block.on {
+      background: red;
+    }
+
+    .blocks .row :last-child {
+      clear: both;
+      height: 0;
+      width: 0;
+      border: 0;
+    }
+
+    .panel button {
+      font-size: 125%;
+      margin: 5px;
+    }
+
+    .result input {
+      width: 100%;
+    }
+
+    .clear { clear: both; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Led Matrix Painter</h1>
+  </header>
+  <section class="main">
+    <div class="blocks"></div>
+    <div class="panel"></div>
+    <div class="clear"></div>
+  </section>
+  <section class="result">
+    <p>Horizontal 1:</p>
+    <input type="text" class="h1" />
+    <p>Horizontal 2:</p>
+    <input type="text" class="h2" />
+    <p>Vertical 1:</p>
+    <input type="text" class="v1" />
+    <p>Vertical 2:</p>
+    <input type="text" class="v2" />
+  </section>
+  <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
