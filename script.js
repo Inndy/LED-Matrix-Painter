@@ -43,10 +43,10 @@ var summery = function () {
     var v1 = m[1].map(function (v) { return 'B' + v; }).join(", ");
     var v2 = m[1].map(function (v) { return 'B' + v.split("").reverse().join(""); }).join(", ");
 
-    $(".h1").val(h1);
-    $(".h2").val(h2);
-    $(".v1").val(v1);
-    $(".v2").val(v2);
+    $(".h1").val(h1 + ",");
+    $(".h2").val(h2 + ",");
+    $(".v1").val(v1 + ",");
+    $(".v2").val(v2 + ",");
 };
 
 for (var i = 1; i <= COUNT; i++) {
